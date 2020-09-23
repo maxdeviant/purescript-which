@@ -1,0 +1,17 @@
+{
+  "name": "purescript-which",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:maxdeviant/purescript-which.git",
+  "author": "Marshall Bowers <elliott.codes@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "purlin format && purty --write test/",
+    "build": "purlin build",
+    "test": "purlin test",
+    "bump-version": "spago bump-version"
+  },
+  "devDependencies": {
+    "purlin": "^0.1.7"
+  }
+}
