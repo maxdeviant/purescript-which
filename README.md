@@ -1,5 +1,7 @@
 # purescript-which
 
+[![Pursuit](https://pursuit.purescript.org/packages/purescript-which/badge)](https://pursuit.purescript.org/packages/purescript-which)
+
 PureScript bindings for [`which`](https://www.npmjs.com/package/which).
 
 ## Installation
