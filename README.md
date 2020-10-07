@@ -45,3 +45,24 @@ main = do
         Just found -> "Found " <> commandToFind <> " at " <> found
         Nothing -> "Did not find " <> commandToFind
 ```
+
+```purs
+module Main where
+
+import Prelude
+import Data.Maybe (Maybe(..))
+import Data.Options ((:=))
+import Effect (Effect)
+import Effect.Console (log)
+import Which (whichSync, path)
+
+main :: Effect Unit
+main = do
+  let
+    commandToFind = "neofetch"
+  command <- whichSync (Just $ path := Just ".") commandToFind
+  log
+    $ case command of
+        Just found -> "Found " <> commandToFind <> " at " <> found
+        Nothing -> "Did not find " <> commandToFind
+```
