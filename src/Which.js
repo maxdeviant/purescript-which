@@ -1,6 +1,6 @@
-const which = require('which');
+import which from 'which';
 
-exports.whichSyncImpl = function (command, options) {
+export function whichSyncImpl(command, options) {
   options = options || {};
 
   return which.sync(command, {
@@ -8,9 +8,9 @@ exports.whichSyncImpl = function (command, options) {
     path: options.path,
     pathExt: options.pathExt,
   });
-};
+}
 
-exports.whichAllSyncImpl = function (command, options) {
+export function whichAllSyncImpl(command, options) {
   options = options || {};
 
   return which.sync(command, {
@@ -19,4 +19,4 @@ exports.whichAllSyncImpl = function (command, options) {
     path: options.path,
     pathExt: options.pathExt,
   });
-};
+}
